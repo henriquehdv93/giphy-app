@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap:wrap;
   margin-top: 3rem;
+  min-height: 150px;
+  &.empty {
+    align-items: center;
+  }
   &--item {
     flex: 0 0 21%;
     max-width: 21%;
@@ -9,13 +13,39 @@
     padding-right: 15px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-bottom: 3rem;
-    &--image {
+    padding-bottom: 1.5rem;
+    > div {
+      border-radius: 5px;
+      position: relative;
+      z-index: 10;
+      border: 1;
+    }
+    &--gif {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       width: 100%;
       object-fit: cover;
-      height: 200px;
+      height: 180px;
+      font-size: 0;
     }
+    &--info {
+      background-color:$color;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 10px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color1;
+        position: relative;
+        z-index: 30;
+      }
+    }
+    
   }
-  
 }

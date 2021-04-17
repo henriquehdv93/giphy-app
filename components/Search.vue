@@ -1,9 +1,9 @@
 <template>
-  <div class="search">
+  <div class="formDefault">
     <form v-on:submit.prevent="submitSearch()">
-      <label for="search">Pesquisar</label>
+      <label for="search">Pesquise seu gif:</label>
       <div class="inputBox">
-      <input type="search" v-model="search" name="search" placeholder="Ex: Cachorros" class="inputBox--formInput"><button type="submit"><img src="/images/loupe.svg" alt="Lupa da busca" title="Buscar"></button>
+      <input type="search" v-model="search" name="search" placeholder="Ex: Cachorros" class="inputBox--formControl"><button type="submit"><img src="/images/loupe.svg" alt="Lupa da busca" title="Buscar">Pesquisar</button>
     </div>
     </form>
   </div>
@@ -27,11 +27,16 @@ export default {
       return this.$axios.$get(url).then((response) => {
           if (response.meta.msg === 'OK') {
             console.log('entrou');
-            this.setGifList(response.data);
+            this.setGifList([]);
+            const obj = response.data;
+            for (var i in obj) {
+                const item = obj[i];
+                item.hasAddedToCollection = false;
+            }
+            this.setGifList(obj);
           }
         })
         .catch((error) => {
-          console.log('erroeeee');
         })
     }
   }

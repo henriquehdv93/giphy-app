@@ -116,6 +116,12 @@ button:focus {
 .hidden {
 	display: none !important;
 }
+.textCenter {
+	text-align: center;
+}
+.justifyContentCenter {
+	justify-content: center;
+}
 
 ::-moz-selection {
 	background: rgba(97, 92, 253, 0.75);
@@ -132,26 +138,41 @@ button.btnDefault {
 }
 
 .btnDefault {
-	background-color: $color1;
 	padding: .5rem .7rem;
 	font-size: .9rem;
-	text-shadow: 1px 1px rgba(0, 0, 0, .4);
 	text-decoration: none;
-	color: $color;
 	max-width: 200px;
+	border-radius: 5px;
 	@include transition(all .4s);
 	cursor: pointer;
-
-	&:hover {
+	display: flex;
+	justify-content: center;
+	&:hover, &:focus {
 		text-decoration: none;
-		-webkit-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.55);
-		-moz-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.55);
-		box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.55);
-		color: $color;
+		-webkit-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.15);
+		box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.15);
 	}
-
-	&:focus {
+	&.black {
+		background-color: $color1;
 		color: $color;
+		// &:hover {
+		// 	background-color: $color;
+		// 	color: $color1;
+		// }
+	}
+	&.white {
+		background-color: $color;
+		border: 1px solid $color1;
+		color: $color1;
+		// &:hover {
+		// 	background-color: $color1;
+		// 	color: $color;
+		// }
+	}
+	img {
+		width: 15px;
+		margin-right: 5px;
 	}
 }
 .appContainer {
@@ -178,10 +199,73 @@ button.btnDefault {
 .rounded {
 	border-radius: 6px;
 }
-.bgWhite {
-	background: $color;
+.bgGray {
+	background: $color2;
 }
 .imgFluid {
 	max-width: 100%;
 	height: auto;
+}
+.formDefault {
+	label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .inputBox {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+    &--formControl {
+      border-right-color: transparent;
+      display: block;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      position: relative;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      width: 1%;
+      margin-bottom: 0;
+      &:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+      }
+      &:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+    button {
+      background-color: $color1;
+      font-size: 0;
+      padding: 5px 10px;
+      position: relative;
+      z-index: 2;
+      border-radius: .25rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: 0;
+      cursor: pointer;
+      img {
+        width: 20px;
+      }
+    }
+  }
 }

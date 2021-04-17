@@ -2,7 +2,7 @@
   <header class="header">
     <div class="appContainer">
       <div class="logo">
-        <img :src="logo.url" :alt="logo.alt" :title="logo.title" />
+        <a href="/" title="Voltar para a página inicial"><img :src="logo.url" :alt="logo.alt" :title="logo.title" /></a>
       </div>
     </div>
   </header>
