@@ -12,8 +12,8 @@
           </div>
       </div>
     </section>
-    <section class="gifsList justifyContentCenter" v-else>
-      <h2>Seus gifs serão carregados aqui!</h2>
+    <section class="gifsList justifyContentCenter alignItemsCenter" v-else>
+      <h2>Faça uma pesquisa para carregar os gifs!</h2>
     </section>
   </div>
 </template>

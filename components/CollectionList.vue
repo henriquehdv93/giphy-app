@@ -13,7 +13,7 @@
           </div>
       </div>
     </section>
-    <section class="gifsList justifyContentCenter" v-else>
+    <section class="gifsList justifyContentCenter alignItemsCenter" v-else>
       <h2>Não há gifs salvos em sua coleção :(</h2>
     </section>
   </div>

@@ -1,11 +1,11 @@
 {
-  "name": "hotelflow-teste-giphy-api",
+  "name": "giphy-app",
   "version": "1.0.0",
-  "description": "Teste de conhecimentos para processo seletivo de vaga para o cargo de Front-End Developer na Hotelflow",
+  "description": "App personalizado do Giphy, onde você pode pesquisar seus gifs e montar sua própria coleção.",
   "author": "Henrique Vargas - www.henriquevargas.com.br",
   "private": true,
   "scripts": {
-    "dev": "NUXT_HOST=0.0.0.0 NUXT_ENV_URL=http://localhost:3000 NUXT_ENV_URL_BASE_API=https://api.henriquevargas.com.br/ nuxt",
+    "dev": "NUXT_HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

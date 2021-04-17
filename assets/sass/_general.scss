@@ -122,6 +122,9 @@ button:focus {
 .justifyContentCenter {
 	justify-content: center;
 }
+.alignItemsCenter {
+	align-items: center;
+}
 
 ::-moz-selection {
 	background: rgba(97, 92, 253, 0.75);
@@ -141,12 +144,12 @@ button.btnDefault {
 	padding: .5rem .7rem;
 	font-size: .9rem;
 	text-decoration: none;
-	max-width: 200px;
 	border-radius: 5px;
 	@include transition(all .4s);
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	&:hover, &:focus {
 		text-decoration: none;
 		-webkit-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.15);
@@ -156,19 +159,17 @@ button.btnDefault {
 	&.black {
 		background-color: $color1;
 		color: $color;
-		// &:hover {
-		// 	background-color: $color;
-		// 	color: $color1;
-		// }
 	}
 	&.white {
 		background-color: $color;
 		border: 1px solid $color1;
 		color: $color1;
-		// &:hover {
-		// 	background-color: $color1;
-		// 	color: $color;
-		// }
+	}
+	&.small {
+		padding: .5rem .7rem;
+	}
+	&.large {
+		padding: 1rem .7rem;
 	}
 	img {
 		width: 15px;
@@ -179,6 +180,7 @@ button.btnDefault {
 	display: block;
 	max-width: 980px;
 	padding: 0 15px;
+	margin: 0 15px;
 	&.mainPadding {
 		padding: 1rem 0;
 	}
@@ -187,9 +189,18 @@ button.btnDefault {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-direction: column;
+		@media screen and (min-width: 576px) {
+			flex-direction: row;
+		}
 		> div {
-			max-width: 30%;
-			flex: 0 0 30%;
+			margin-bottom: 1rem;
+			width: 100%;
+			@media screen and (min-width: 576px) {
+				max-width: 30%;
+				flex: 0 0 30%;
+				margin-bottom: 0;
+			}
 		}
 	}
 	@media screen and (min-width: 992px) {
@@ -226,7 +237,7 @@ button.btnDefault {
       border-right-color: transparent;
       display: block;
       padding: .375rem .75rem;
-      font-size: 1rem;
+      font-size: .8rem;
       line-height: 1.5;
       color: #495057;
       background-color: #fff;

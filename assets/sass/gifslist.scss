@@ -1,32 +1,59 @@
 .gifsList {
   display: flex;
   flex-wrap:wrap;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   min-height: 150px;
   &.empty {
     align-items: center;
   }
   &--item {
-    flex: 0 0 21%;
-    max-width: 21%;
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
     justify-content: center;
     padding-bottom: 1.5rem;
+    position: relative;
+    width: 100%;
+    @media all and (min-width: 400px){
+      flex: 0 0 42%;
+      max-width: 42%;
+    }
+    @media all and (min-width: 576px){
+      flex: 0 0 28%;
+      max-width: 28%;
+    }
+    @media all and (min-width: 768px){
+      flex: 0 0 29.1%;
+      max-width: 29.1%;
+    }
+    @media all and (min-width: 992px){
+      flex: 0 0 21%;
+      max-width: 21%;
+    }
     > div {
       border-radius: 5px;
       position: relative;
       z-index: 10;
       border: 1;
+      width: 100%;
+      background-color: $color;
     }
     &--gif {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       width: 100%;
       object-fit: cover;
-      height: 180px;
+      height: 220px;
       font-size: 0;
+      @media all and (min-width: 576px){
+        height: 200px;
+      }
+      @media all and (min-width: 768px){
+        height: 230px;
+      }
+      @media all and (min-width: 992px){
+        height: 180px;
+      }
     }
     &--info {
       background-color:$color;

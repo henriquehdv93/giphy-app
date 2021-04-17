@@ -5,11 +5,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  img {
-    max-width: 45px;
+  > a {
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
+    img {
+      width: 45px;
+      margin-right: .5rem;
+    }
+    span {
+      font-size: 16px;
+      color: $color;
+    }
   }
   p {
     color: $color;
+    text-align: center;
+    a {
+      color: $color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@
     <label for="order">Ordenar por:</label>
       <div class="inputBox">
         <select name="order" id="order" class="inputBox--formControl" v-model="order" @change="setOrder($event)">
-          <option value="">Selecione</option>
+          <option value="0" selected="selected">Selecione</option>
           <option value="1">A-Z</option>
           <option value="2">Z-A</option>
         </select>

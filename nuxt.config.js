@@ -8,24 +8,24 @@ export default {
         htmlAttrs: {
             lang: 'pt-br',
         },
-        title: 'HotelFlow Giphy API | Henrique Vargas',
+        title: 'Giphy App',
         meta: [
             {charset: 'utf-8'},
             {name: 'msapplication-TileColor', content: '#da532c'},
             {name: 'theme-color', content: '#000000'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no'},
-            {hid: 'description', name: 'description', content: 'Teste de conhecimentos para processo seletivo de vaga para o cargo de Front-End Developer na Hotelflow'},
-            {hid: 'keywords', name: 'description', content: 'Hotelflow, Giphy, Giphy API'},
-            {hid: 'og:title', property: 'og:title', content: 'HotelFlow Giphy API | Henrique Vargas'},
-            {hid: 'og:description', property: 'og:description', content: 'Teste de conhecimentos para processo seletivo de vaga para o cargo de Front-End Developer na Hotelflow'},
-            {hid: 'twitter:description', property: 'twitter:description', content: 'Teste de conhecimentos para processo seletivo de vaga para o cargo de Front-End Developer na Hotelflow'},
+            {hid: 'description', name: 'description', content: 'App personalizado do Giphy, onde você pode pesquisar seus gifs e montar sua própria coleção.'},
+            {hid: 'keywords', name: 'description', content: 'Giphy, Giphy API'},
+            {hid: 'og:title', property: 'og:title', content: 'Giphy App'},
+            {hid: 'og:description', property: 'og:description', content: 'App personalizado do Giphy, onde você pode pesquisar seus gifs e montar sua própria coleção.'},
+            {hid: 'twitter:description', property: 'twitter:description', content: 'App personalizado do Giphy, onde você pode pesquisar seus gifs e montar sua própria coleção.'},
             {hid: 'og:type', property: 'og:type', content: 'website'},
-            {hid: 'og:url', property: 'og:url', content: 'https://hotelflow.henriquevargas.com.br'},
-            {hid: 'og:image', property: 'og:image', content: 'http://hotelflow.henriquevargas.com.br/compartilhamento.png'},
-            {hid: 'twitter:image', property: 'twitter:image', content: 'http://hotelflow.henriquevargas.com.br/compartilhamento.png'},
+            {hid: 'og:url', property: 'og:url', content: 'https://giphyapp.henriquevargas.com.br'},
+            {hid: 'og:image', property: 'og:image', content: 'http://giphyapp.henriquevargas.com.br/compartilhamento.png'},
+            {hid: 'twitter:image', property: 'twitter:image', content: 'http://giphyapp.henriquevargas.com.br/compartilhamento.png'},
         ],
         link: [
-            {rel: 'canonical', href: 'https://hotelflow.henriquevargas.com.br'},
+            {rel: 'canonical', href: 'https://giphyapp.henriquevargas.com.br'},
             {rel: 'apple-touch-icon', href: '/apple-touch-icon.png'},
             {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
             {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'},
@@ -68,7 +68,7 @@ export default {
             Allow: '/'
         }],
         ['@nuxtjs/sitemap', {
-            "hostname": "https://hotelflow.henriquevargas.com.br",
+            "hostname": "https://giphyapp.henriquevargas.com.br",
             exclude: [
                 '/404'
             ]

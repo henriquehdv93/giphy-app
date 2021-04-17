@@ -1,6 +1,6 @@
 <template>
   <div class="btnWrap">
-    <a :href="href" class="btnDefault black">{{ title }}</a>
+    <a :href="href" class="btnDefault black large">{{ title }}</a>
   </div>
 </template>
 <script>

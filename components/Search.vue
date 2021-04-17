@@ -3,7 +3,7 @@
     <form v-on:submit.prevent="submitSearch()">
       <label for="search">Pesquise seu gif:</label>
       <div class="inputBox">
-      <input type="search" v-model="search" name="search" placeholder="Ex: Cachorros" class="inputBox--formControl"><button type="submit"><img src="/images/loupe.svg" alt="Lupa da busca" title="Buscar">Pesquisar</button>
+      <input type="search" v-model="search" name="search" placeholder="Ex: Cachorro, Simpson, Memes" class="inputBox--formControl"><button type="submit"><img src="/images/loupe.svg" alt="Lupa da busca" title="Buscar">Pesquisar</button>
     </div>
     </form>
   </div>
