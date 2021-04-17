@@ -1,0 +1,21 @@
+.gifsList {
+  display: flex;
+  flex-wrap:wrap;
+  margin-top: 3rem;
+  &--item {
+    flex: 0 0 21%;
+    max-width: 21%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    &--image {
+      width: 100%;
+      object-fit: cover;
+      height: 200px;
+    }
+  }
+  
+}

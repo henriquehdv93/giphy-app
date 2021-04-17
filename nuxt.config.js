@@ -56,12 +56,13 @@ export default {
     ** Nuxt.js dev-modules
     */
     buildModules: [
-      ['@nuxtjs/gtm', {id: 'GTM-XXXXXX', dev: false}]
+      ['@nuxtjs/gtm', {id: 'GTM-XXXXXX', dev: false}],
     ],
     /*
     *   * Nuxt.js modules
     */
     modules: [
+        '@nuxtjs/axios',
         ['@nuxtjs/robots', {
             UserAgent: '*',
             Allow: '/'
@@ -84,20 +85,6 @@ export default {
                         chunks: 'async',
                         enforce: false
                     }
-                }
-            }
-        },
-        postcss: {
-            // Add plugin names as key and arguments as value
-            // Install them before as dependencies with npm or yarn
-            plugins: {
-                "postcss-import": {          
-                }
-            },
-            preset: {
-                // Change the postcss-preset-env settings
-                autoprefixer: {
-                    grid: true
                 }
             }
         },

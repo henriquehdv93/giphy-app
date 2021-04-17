@@ -1,0 +1,15 @@
+.footer {
+  background: $color1;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 45px;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: $color;
+  }
+}
