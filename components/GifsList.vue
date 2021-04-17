@@ -58,8 +58,6 @@ export default {
   mounted() {
     if(process.browser) {
       const content = JSON.parse(localStorage.getItem("collection"));
-      console.log(content);
-      return;
       if (content === null) {
         this.collection = Array();
       }

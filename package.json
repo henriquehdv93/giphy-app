@@ -18,10 +18,9 @@
     "nuxt-validate": "^1.0.1"
   },
   "devDependencies": {
-    "@nuxtjs/gtm": "^2.1.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "autoprefixer": "^7.2.3",
     "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^10.1.1"
   }
 }

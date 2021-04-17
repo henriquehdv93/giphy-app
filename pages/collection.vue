@@ -2,7 +2,7 @@
   <div>
     <div class="appContainerInner">
       <Ordering v-if="collection.length" />
-      <Btn href="/" title="Voltar para a pesquisa"/>
+      <Btn href="/" title="Pesquisar mais gifs"/>
     </div>
     <div class="">
       <CollectionList :collection="collection" />
@@ -39,7 +39,13 @@ export default {
     if(process.browser) {
         collectionSaved = JSON.parse(localStorage.getItem("collection"));
     }
-    this.setCollection(collectionSaved);
+    if(collectionSaved === null) {
+      this.setCollection(Array());
+    }
+    else {
+      this.setCollection(collectionSaved);
+    }
+    
   }
 }
 </script>

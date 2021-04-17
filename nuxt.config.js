@@ -1,5 +1,4 @@
 export default {
-    mode: 'universal',
     target: 'static',
     /*
     ** Headers of the page
@@ -56,7 +55,7 @@ export default {
     ** Nuxt.js dev-modules
     */
     buildModules: [
-      ['@nuxtjs/gtm', {id: 'GTM-XXXXXX', dev: false}],
+      
     ],
     /*
     *   * Nuxt.js modules
@@ -91,7 +90,6 @@ export default {
         /**
          * add external plugins
          */
-        vendor: [],
         plugins: [],
         env: {
             baseUrl: process.env.BASE_URL || 'http://localhost:3000'
