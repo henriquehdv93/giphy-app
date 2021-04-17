@@ -7,7 +7,7 @@
             <video :src="item.image" class="gifsList--item--gif" autoplay loop></video>
             <div class="gifsList--item--info">
               <h2>{{ item.title }}</h2>
-              <button type="button" class="btnDefault white" @click.prevent="removeToCollection(item.id)"><img src="/images/heart-complete.svg" title="Adicionar a coleção" alt="Coleção">Remover da coleção</button>
+              <button type="button" class="btnDefault white bordered" @click.prevent="removeToCollection(item.id)"><img src="/images/heart-complete.svg" title="Adicionar a coleção" alt="Coleção">Remover da coleção</button>
             </div>
             
           </div>

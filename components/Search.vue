@@ -20,7 +20,7 @@ export default {
     submitSearch() {
       let apiKey = "71usB5XxJ1KpBTkrZset3cAvTKylHrPO";
       let searchEndPoint = "https://api.giphy.com/v1/gifs/search?";
-      let limit = 16;
+      let limit = 40;
       let url = `${searchEndPoint}&api_key=${apiKey}&q=${
         this.search
       }&limit=${limit}`;

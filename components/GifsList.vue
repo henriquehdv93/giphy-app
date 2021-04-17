@@ -6,8 +6,11 @@
             <!-- Optei por utilizar a tag <video> para poder usar a imagem em formato reduzido em .mp4 que a api fornece, pois o gif inserido através da tag <img>, mesmo sendo downsized, praticamente cada imagem tinha 1mb, então deixava a aplicação lenta. -->
             <video :src="item.images.downsized_small.mp4" class="gifsList--item--gif" autoplay loop></video>
             <div class="gifsList--item--info">
-              <h2>{{ item.title }}</h2>
-              <button type="button" class="btnDefault white" @click.prevent="sendToCollection(item)"><img src="/images/heart.svg" title="Adicionar a coleção" alt="Coleção">Adicionar a coleção</button>
+              <h2>{{ item.title }} {{ item.hasAddedToCollection }}</h2>
+              <button type="button" :class="{ addedFromCollection: item.hasAddedToCollection }" class="btnDefault white bordered" @click.prevent="sendToCollection(item)" :title="item.hasAddedToCollection ? 'Adicionado a coleção!' : 'Adicionar a coleção'">
+                <img :src="item.hasAddedToCollection ? '/images/heart-white.svg' : '/images/heart.svg'" title="Coração" alt="Coleção">
+                  {{ item.hasAddedToCollection ? 'Adicionado a coleção!' : 'Adicionar a coleção' }}
+                </button>
             </div>
           </div>
       </div>
@@ -39,6 +42,13 @@ export default {
         title: title,
       }
       this.collection.push(item);
+      const obj = this.gifsList;
+      for (var i in obj) {
+        const gifsListItem = obj[i];
+        if(gifsListItem.id === id) {
+          gifsListItem.hasAddedToCollection = true;
+        }
+      }
       // eu particularmente usaria uma biblioteca de cookie como o js-cookie neste caso, por ser possível ler os dados tanto no server-side do nuxt.js quanto no client-side do browser. Porém, como na tarefa pedia localStorage ou indexedDB, vou usar localStorage somente no client-side.
       if(process.browser) {
         localStorage.setItem("collection", JSON.stringify(this.collection));

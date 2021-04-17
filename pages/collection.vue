@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="appContainerInner">
-      <Ordering />
+      <Ordering v-if="collection.length" />
       <Btn href="/" title="Voltar para a pesquisa"/>
     </div>
     <div class="">
