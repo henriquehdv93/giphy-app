@@ -35,8 +35,16 @@ export default {
             }
             this.setGifList(obj);
           }
+          else {
+            if(process.browser) {
+              alert('Houve um erro ao processar a pesquisa. tente novamente.')
+            }
+          }
         })
         .catch((error) => {
+          if(process.browser) {
+            alert('Houve um erro ao processar a pesquisa. tente novamente.')
+          }
         })
     }
   }
