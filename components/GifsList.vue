@@ -6,7 +6,7 @@
             <!-- Optei por utilizar a tag <video> para poder usar a imagem em formato reduzido em .mp4 que a api fornece, pois o gif inserido através da tag <img>, mesmo sendo downsized, praticamente cada imagem tinha 1mb, então deixava a aplicação lenta. -->
             <video :src="item.images.downsized_small.mp4" class="gifsList--item--gif" autoplay loop></video>
             <div class="gifsList--item--info">
-              <h2>{{ item.title }} {{ item.hasAddedToCollection }}</h2>
+              <h2>{{ item.title }}</h2>
               <button type="button" :class="{ addedFromCollection: item.hasAddedToCollection }" class="btnDefault white bordered" @click.prevent="sendToCollection(item)" :title="item.hasAddedToCollection ? 'Adicionado a coleção!' : 'Adicionar a coleção'">
                 <img :src="item.hasAddedToCollection ? '/images/heart-white.svg' : '/images/heart.svg'" title="Coração" alt="Coleção">
                   {{ item.hasAddedToCollection ? 'Adicionado a coleção!' : 'Adicionar a coleção' }}
