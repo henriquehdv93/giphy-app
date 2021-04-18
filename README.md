@@ -16,4 +16,4 @@ Como usar esta aplicação em seu ambiente de desenvolvimento:
 - Executar o comando "npm install" para baixar todas as dependências
 - Executar o comando "npm run dev" para levantar o servidor. (a aplicação, por padrão, estará disponível no endereço: http://localhost:3000)
 
-URL do projeto: https://giphyapi.henriquevargas.com.br
+URL do projeto: https://giphyapp.henriquevargas.com.br
