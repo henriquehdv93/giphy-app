@@ -2,7 +2,7 @@
 
 Tecnologias utilizadas para desenvolvimento da aplicação:
 
-- Vuejs
+- Vue.js
 - Nuxt.js
 - Axios
 - Vuex
